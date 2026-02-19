@@ -1,7 +1,7 @@
 import { useState, useCallback } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-import QRCode from 'qrcode.react';
+import { QRCodeCanvas } from 'qrcode.react';
 import { Squares } from '../components/SquaresBackground';
 import { GlassCard } from '../components/GlassCard';
 import { GradientButton } from '../components/GradientButton';
@@ -221,7 +221,7 @@ export default function StudentDashboard() {
                 <div className="text-center">
                   <h3 className="text-xl font-bold text-white mb-6">Certificate QR Code</h3>
                   <div className="bg-white p-4 rounded-lg inline-block mb-6">
-                    <QRCode value={selectedCertId} size={200} level="H" includeMargin={true} />
+                    <QRCodeCanvas value={selectedCertId} size={200} level="H" includeMargin={true} />
                   </div>
                   <p className="text-sm text-gray-400 mb-6">{selectedCertId}</p>
                   <button
